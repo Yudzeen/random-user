@@ -7,6 +7,9 @@ import com.eugenejavinas.randomuser.data.model.Street
 import com.eugenejavinas.randomuser.data.model.User
 import com.eugenejavinas.randomuser.data.network.UserResponse
 
+/**
+ * Converts network user response to user model
+ */
 fun UserResponse.toModel(): User {
     return User(
         name = Name(

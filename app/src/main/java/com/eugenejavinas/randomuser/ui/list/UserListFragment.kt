@@ -37,6 +37,19 @@ class UserListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        adapter = UserListAdapter { user ->
+            UserListFragmentDirections.actionUserListFragmentToUserDetailFragment(user).let {
+                findNavController().navigate(it)
+            }
+        }
+        binding.userRecyclerView.adapter = adapter
+        binding.fab.setOnClickListener {
+            showEnterUserCountDialog()
+        }
+        observeUsersLiveData()
+    }
+
+    private fun observeUsersLiveData() {
         viewModel.getUsersLiveData().observe(viewLifecycleOwner) {
             when (it) {
                 is Resource.Loading -> {
@@ -58,15 +71,6 @@ class UserListFragment : Fragment() {
                         getString(R.string.generic_error_message), Snackbar.LENGTH_LONG).show()
                 }
             }
-        }
-        adapter = UserListAdapter { user ->
-            UserListFragmentDirections.actionUserListFragmentToUserDetailFragment(user).let {
-                findNavController().navigate(it)
-            }
-        }
-        binding.userRecyclerView.adapter = adapter
-        binding.fab.setOnClickListener {
-            showEnterUserCountDialog()
         }
     }
 

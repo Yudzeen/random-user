@@ -1,7 +1,6 @@
 package com.eugenejavinas.randomuser.data.network
 
 import android.util.Log
-import com.eugenejavinas.randomuser.data.model.User
 import io.reactivex.rxjava3.core.Single
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
