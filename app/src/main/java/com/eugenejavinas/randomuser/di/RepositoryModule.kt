@@ -3,7 +3,6 @@ package com.eugenejavinas.randomuser.di
 import com.eugenejavinas.randomuser.data.network.RandomUserApi
 import com.eugenejavinas.randomuser.data.repository.UserRepository
 import com.eugenejavinas.randomuser.data.repository.UserRepositoryImpl
-import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

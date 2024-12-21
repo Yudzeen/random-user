@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="list_padding">4dp</dimen>
-    <dimen name="card_margin">8dp</dimen>
-    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="margin_xxsmall">2dp</dimen>
+    <dimen name="margin_xsmall">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_regular">16dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+    <dimen name="margin_xlarge">64dp</dimen>
+    <dimen name="margin_xxlarge">128dp</dimen>
+
+    <dimen name="dialog_content_margin">48dp</dimen>
+    <dimen name="list_padding">@dimen/margin_xsmall</dimen>
+    <dimen name="card_margin">@dimen/margin_small</dimen>
+    <dimen name="fab_margin">@dimen/margin_regular</dimen>
+    <dimen name="loading_indicator_size">48dp</dimen>
 </resources>

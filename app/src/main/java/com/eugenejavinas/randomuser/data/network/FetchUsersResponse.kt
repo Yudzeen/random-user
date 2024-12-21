@@ -1,16 +1,15 @@
 package com.eugenejavinas.randomuser.data.network
 
-import com.eugenejavinas.randomuser.data.model.User
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 class FetchUsersResponse(
-    @field:Json(name = "results") var results: List<UserNetwork>? = null
+    @field:Json(name = "results") var results: List<UserResponse>? = null
 )
 
 @JsonClass(generateAdapter = true)
-class UserNetwork(
+class UserResponse(
     @field:Json(name = "name") val name: Name? = null,
     @field:Json(name = "location") val location: Location? = null,
     @field:Json(name = "gender") val gender: String? = null,

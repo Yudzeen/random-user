@@ -1,4 +1,4 @@
-package com.eugenejavinas.randomuser.common.lifecycle
+package com.eugenejavinas.randomuser.common.rx
 
 import androidx.lifecycle.ViewModel
 import io.reactivex.rxjava3.disposables.CompositeDisposable

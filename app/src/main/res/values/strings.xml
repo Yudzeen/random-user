@@ -2,5 +2,15 @@
     <string name="app_name">Random User App</string>
 
     <string name="user">User</string>
-    <string name="enter_count">Enter count</string>
+    <string name="enter_user_count">Enter user count</string>
+    <string name="enter_user_count_dialog_title">Enter number of users (max %d):</string>
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
+    <string name="invalid_input">Invalid input.</string>
+    <string name="generic_error_message">An error occurred. Please try again later.</string>
+    <string name="user_details">User Details</string>
+
+    <string name="gender">Gender: %s</string>
+    <string name="address">Address: %s</string>
+    <string name="email">Email: %s</string>
 </resources>

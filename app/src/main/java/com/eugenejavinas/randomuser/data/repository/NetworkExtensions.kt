@@ -1,16 +1,20 @@
 package com.eugenejavinas.randomuser.data.repository
 
+import com.eugenejavinas.randomuser.data.model.Address
+import com.eugenejavinas.randomuser.data.model.Name
+import com.eugenejavinas.randomuser.data.model.Picture
+import com.eugenejavinas.randomuser.data.model.Street
 import com.eugenejavinas.randomuser.data.model.User
-import com.eugenejavinas.randomuser.data.network.UserNetwork
+import com.eugenejavinas.randomuser.data.network.UserResponse
 
-fun UserNetwork.toModel(): User {
+fun UserResponse.toModel(): User {
     return User(
-        name = User.Name(
+        name = Name(
             first = name?.first ?: "",
             last = name?.last ?: ""
         ),
-        address = User.Address(
-            street = User.Address.Street(
+        address = Address(
+            street = Street(
                 number = location?.street?.number ?: -1,
                 name = location?.street?.name ?: ""
             ),
@@ -20,9 +24,7 @@ fun UserNetwork.toModel(): User {
         ),
         gender = gender ?: "",
         email = email ?: "",
-        landline = landline ?: "",
-        mobile = mobile ?: "",
-        picture = User.Picture(
+        picture = Picture(
             large = picture?.large ?: "",
             medium = picture?.medium ?: "",
             thumbnail = picture?.thumbnail ?: ""

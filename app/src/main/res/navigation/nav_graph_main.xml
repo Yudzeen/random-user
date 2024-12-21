@@ -8,6 +8,19 @@
     <fragment
         android:id="@+id/userListFragment"
         android:name="com.eugenejavinas.randomuser.ui.list.UserListFragment"
-        android:label="fragment_user_list"
-        tools:layout="@layout/fragment_user_list" />
+        tools:layout="@layout/fragment_user_list" >
+        <action
+            android:id="@+id/action_userListFragment_to_userDetailFragment"
+            app:destination="@id/userDetailFragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userDetailFragment"
+        android:name="com.eugenejavinas.randomuser.ui.detail.UserDetailFragment">
+        <argument
+            android:name="user"
+            app:argType="com.eugenejavinas.randomuser.data.model.User"
+            app:nullable="false"/>
+    </fragment>
 </navigation>

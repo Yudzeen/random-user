@@ -2,7 +2,7 @@ package com.eugenejavinas.randomuser.ui.list
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.eugenejavinas.randomuser.common.lifecycle.RxViewModel
+import com.eugenejavinas.randomuser.common.rx.RxViewModel
 import com.eugenejavinas.randomuser.common.utils.Resource
 import com.eugenejavinas.randomuser.data.model.User
 import com.eugenejavinas.randomuser.data.repository.UserRepository
